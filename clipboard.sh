@@ -1,5 +1,5 @@
 #!/bin/sh
-ver=0.0.1
+version=0.0.1
 clipboarddir=/tmp/clipboardsh
 clipboardfile=/tmp/clipboardsh/clipboard
 op=$1
@@ -166,11 +166,13 @@ help () {
   cut   [file]    : Cut a file
   paste [clip #]  : Paste a file
   clear           : Clear the clipboard
-  remove [clip #] :
+  remove [clip #] : Remove a certain clip from the clipboard
   list            : Show the copied files (default)
+  help            : Displays the help
 "
 }
 
+# Check for the requested operation
 if [ "$op" = "copy" ] || [ "$op" = "cp" ]; then
     copy
 elif [ "$op" = "cut" ] || [ "$op" = "ct" ]; then
